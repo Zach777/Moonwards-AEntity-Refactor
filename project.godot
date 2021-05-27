@@ -1,0 +1,49 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "AEntity",
+"language": "GDScript",
+"path": "res://Entity.gd"
+}, {
+"base": "Node",
+"class": "EPIBase",
+"language": "GDScript",
+"path": "res://EPIBase.gd"
+}, {
+"base": "EPIBase",
+"class": "EPIUse",
+"language": "GDScript",
+"path": "res://EPIUse.gd"
+} ]
+_global_script_class_icons={
+"AEntity": "",
+"EPIBase": "",
+"EPIUse": ""
+}
+
+[application]
+
+config/name="Godot"
+run/main_scene="res://Main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Autoload="*res://Autoload.tscn"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
